@@ -1,5 +1,19 @@
 kind: pipeline
 type: docker
+name: default
+
+steps:
+- name: env
+  image: busybox
+  commands:
+  - env
+
+trigger:
+  branch:
+  - main
+---
+kind: pipeline
+type: docker
 name: cluster1
 
 node:
