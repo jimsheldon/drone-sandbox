@@ -15,3 +15,6 @@ steps:
   image: jimsheldon/alpine-test
   commands:
   - echo "image is private"
+
+image_pull_secrets:
+- jimdockerhub
