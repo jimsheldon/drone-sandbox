@@ -1,34 +1,13 @@
 kind: pipeline
 type: docker
-name: cluster1
-
-node:
-  cluster: one
-
-steps:
-- name: env
-  image: busybox
-  commands:
-  - env
+name: default
 
 trigger:
   branch:
   - main
 
----
-kind: pipeline
-type: docker
-name: cluster2
-
-node:
-  cluster: two
-
 steps:
-- name: env
-  image: busybox
+- name: private
+  image: jimsheldon/alpine-test
   commands:
-  - env
-
-trigger:
-  branch:
-  - main
+  - echo "image is private"
