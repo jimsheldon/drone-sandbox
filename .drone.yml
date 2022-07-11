@@ -17,4 +17,4 @@ steps:
   - echo "image is private"
 
 image_pull_secrets:
-- jimdockerhub
+- reposecret
