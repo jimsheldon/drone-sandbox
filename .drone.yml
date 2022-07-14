@@ -11,6 +11,11 @@ steps:
   image: busybox
   commands:
   - env
+  when:
+    event:
+    - promote
+    target:
+    - example
 
 trigger:
   branch:
