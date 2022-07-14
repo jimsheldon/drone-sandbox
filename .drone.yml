@@ -1,27 +1,10 @@
 kind: pipeline
 type: docker
-name: cluster1
+name: default
 
-node:
-  cluster: one
-
-steps:
-- name: env
-  image: busybox
-  commands:
-  - env
-
-trigger:
-  branch:
-  - main
-
----
-kind: pipeline
-type: docker
-name: cluster2
-
-node:
-  cluster: two
+platform:
+  os: linux
+  arch: arm64
 
 steps:
 - name: env
