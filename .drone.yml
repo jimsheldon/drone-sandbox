@@ -1,9 +1,6 @@
 kind: pipeline
 type: docker
-name: cluster1
-
-node:
-  cluster: one
+name: default
 
 steps:
 - name: env
@@ -14,23 +11,3 @@ steps:
 trigger:
   branch:
   - main
-
----
-kind: pipeline
-type: docker
-name: cluster2
-
-node:
-  cluster: two
-
-steps:
-- name: env
-  image: busybox
-  commands:
-  - env
-
-trigger:
-  branch:
-  - main
-
-# trigger pipeline
