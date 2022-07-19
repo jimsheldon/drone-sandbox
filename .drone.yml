@@ -11,6 +11,7 @@ steps:
   image: busybox
   commands:
   - env
+  - uname -a
 
 trigger:
   branch:
@@ -26,6 +27,7 @@ steps:
   image: busybox
   commands:
   - env
+  - uname -a
 
 trigger:
   branch:
@@ -44,12 +46,10 @@ node:
   type: t3a-xlarge
 
 steps:
-- name: env
+- name: systeminfo
   commands:
   - systeminfo
 
 trigger:
   branch:
   - main
-
-# trigger
