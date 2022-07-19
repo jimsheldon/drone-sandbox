@@ -11,11 +11,24 @@ steps:
   image: busybox
   commands:
   - env
-  when:
-    event:
-    - promote
-    target:
-    - example
+
+trigger:
+  branch:
+  - main
+
+---
+kind: pipeline
+type: exec
+name: windows
+
+platform:
+  os: windows
+  arch: amd64
+
+steps:
+- name: env
+  commands:
+  - systeminfo
 
 trigger:
   branch:
