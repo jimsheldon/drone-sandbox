@@ -25,6 +25,9 @@ platform:
   os: windows
   arch: amd64
 
+node:
+  type: t3a-xlarge
+
 steps:
 - name: env
   commands:
