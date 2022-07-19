@@ -18,6 +18,21 @@ trigger:
 
 ---
 kind: pipeline
+type: docker
+name: amd64
+
+steps:
+- name: env
+  image: busybox
+  commands:
+  - env
+
+trigger:
+  branch:
+  - main
+
+---
+kind: pipeline
 type: exec
 name: windows
 
