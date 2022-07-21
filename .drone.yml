@@ -7,15 +7,10 @@ platform:
   arch: arm64
 
 steps:
-- name: env
+- name: hello
   image: busybox
   commands:
-  - env
-  when:
-    event:
-    - promote
-    target:
-    - example
+  - echo hey office hours
 
 trigger:
   branch:
