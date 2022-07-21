@@ -8,9 +8,10 @@ platform:
 
 steps:
 - name: hello
-  image: busybox
+  image: alpine:3
   commands:
   - echo hey office hours
+  - uname -a
 
 trigger:
   branch:
