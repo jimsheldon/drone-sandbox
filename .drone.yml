@@ -1,18 +1,14 @@
-kind: pipeline
-type: docker
-name: default
-
-platform:
-  os: linux
-  arch: amd64
-
-steps:
-- name: hello
-  image: alpine:3
-  commands:
-  - echo hey office hours
-  - uname -a
-
-trigger:
-  branch:
-  - main
+{
+   "kind": "pipeline",
+   "name": "default",
+   "steps": [
+      {
+         "commands": [
+            "echo hello world"
+         ],
+         "image": "alpine",
+         "name": "build"
+      }
+   ],
+   "type": "docker"
+}
